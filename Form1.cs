@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,7 +36,7 @@ namespace Encryption
             return decrypted;
         }
 
-        string lLlLlL = "f0xle@rn";
+        string lLlLlL = "pvp@xdiscordb0t";
         public string EnryptString(string strEncrypted)
         {
             byte[] b = System.Text.ASCIIEncoding.ASCII.GetBytes(strEncrypted);
