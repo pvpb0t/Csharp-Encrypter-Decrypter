@@ -64,11 +64,13 @@ namespace Encryption
                     textBox2.Text = Convert.ToBase64String(results, 0, results.Length);
                 }
             }
+        textBox1.Text = "";
+        textBox3.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            byte[] data = Convert.FromBase64String(textBox2.Text);
+            byte[] data = Convert.FromBase64String(textBox1.Text);
             using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
             {
                 byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(lLlLlL));
@@ -79,6 +81,8 @@ namespace Encryption
                     textBox3.Text = UTF8Encoding.UTF8.GetString(results);
                 }
             }
+        textBox1.Text = "";
+        textBox2.Text = "";
         }
     }
 }
