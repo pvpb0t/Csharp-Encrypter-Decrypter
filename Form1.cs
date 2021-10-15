@@ -9,7 +9,6 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//tes
 
 namespace Encryption
 {
@@ -30,6 +29,7 @@ namespace Encryption
             timer1.Interval = milliseconds;
             timer1.Enabled = true;
             timer1.Start();
+    //test
             timer1.Tick += (s, e) =>
             {
                 timer1.Enabled = false;
@@ -107,7 +107,7 @@ namespace Encryption
 
             if (String.IsNullOrWhiteSpace(textBox1.Text))
             {
-
+                textBox2.Text = "";
             }
             else
             {
@@ -151,6 +151,11 @@ namespace Encryption
                 wait(1000); //wait one second
                 button3.Text = "Copy";
             }
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
 
