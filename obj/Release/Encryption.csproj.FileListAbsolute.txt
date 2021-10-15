@@ -1,0 +1,10 @@
+C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\bin\Release\Encryption.exe.config
+C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\bin\Release\Encryption.exe
+C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\bin\Release\Encryption.pdb
+C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\obj\Release\Encryption.csproj.AssemblyReference.cache
+C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\obj\Release\Encryption.Form1.resources
+C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\obj\Release\Encryption.Properties.Resources.resources
+C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\obj\Release\Encryption.csproj.GenerateResource.cache
+C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\obj\Release\Encryption.csproj.CoreCompileInputs.cache
+C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\obj\Release\Encryption.exe
+C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\obj\Release\Encryption.pdb
