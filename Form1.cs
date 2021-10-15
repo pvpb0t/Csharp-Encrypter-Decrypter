@@ -29,7 +29,6 @@ namespace Encryption
             timer1.Interval = milliseconds;
             timer1.Enabled = true;
             timer1.Start();
-    //test
             timer1.Tick += (s, e) =>
             {
                 timer1.Enabled = false;
