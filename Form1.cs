@@ -17,8 +17,8 @@ namespace Encryption
         public Form1()
         {
             InitializeComponent();
+            this.Text = "Encrypter/Decrypter";
         }
-
 
         public string DecryptString(string encrString)
         {
@@ -52,37 +52,67 @@ namespace Encryption
 
             //textBox2.Text = $"encrypted string = {encryptedString}";
 
+            var nullorempty = textBox1.Text;
 
-            byte[] data = UTF8Encoding.UTF8.GetBytes(textBox1.Text);
-            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+            if (String.IsNullOrWhiteSpace(nullorempty))
             {
-                byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(lLlLlL));
-                using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider() { Key = keys, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 })
+
+            }
+            else
+            {
+
+
+                byte[] data = UTF8Encoding.UTF8.GetBytes(nullorempty);
+                using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
                 {
-                    ICryptoTransform transform = tripDes.CreateEncryptor();
-                    byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
-                    textBox2.Text = Convert.ToBase64String(results, 0, results.Length);
+                    byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(lLlLlL));
+                    using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider() { Key = keys, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 })
+                    {
+                        ICryptoTransform transform = tripDes.CreateEncryptor();
+                        byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
+                        textBox2.Text = Convert.ToBase64String(results, 0, results.Length);
+                    }
+
+                    textBox1.Text = "";
+                    textBox3.Text = "";
+                    button3.Text = "Copy";
                 }
             }
-        textBox1.Text = "";
-        textBox3.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            byte[] data = Convert.FromBase64String(textBox1.Text);
-            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+
+
+            if (String.IsNullOrWhiteSpace(Convert.FromBase64String(textBox1.Text).ToString()))
             {
-                byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(lLlLlL));
-                using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider() { Key = keys, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 })
-                {
-                    ICryptoTransform transform = tripDes.CreateDecryptor();
-                    byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
-                    textBox3.Text = UTF8Encoding.UTF8.GetString(results);
-                }
+
             }
-        textBox1.Text = "";
-        textBox2.Text = "";
+            else
+            {
+
+                byte[] data = Convert.FromBase64String(textBox1.Text);
+                using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+                {
+                    byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(lLlLlL));
+                    using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider() { Key = keys, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 })
+                    {
+                        ICryptoTransform transform = tripDes.CreateDecryptor();
+                        byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
+                        textBox3.Text = UTF8Encoding.UTF8.GetString(results);
+                    }
+                }
+                textBox1.Text = "";
+                textBox2.Text = "";
+                button3.Text = "Copy";
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox2.Select();
+            textBox2.Copy();
+            button3.Text = "Copied!";
         }
     }
 }
