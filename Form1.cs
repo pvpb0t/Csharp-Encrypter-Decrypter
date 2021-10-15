@@ -52,6 +52,7 @@ namespace Encryption
 
             //textBox2.Text = $"encrypted string = {encryptedString}";
 
+
             var nullorempty = textBox1.Text;
 
             if (String.IsNullOrWhiteSpace(nullorempty))
@@ -63,6 +64,16 @@ namespace Encryption
 
 
                 byte[] data = UTF8Encoding.UTF8.GetBytes(nullorempty);
+
+            var str = textBox1.Text;
+
+            if (String.IsNullOrEmpty(str))
+            {
+
+            }else
+            {
+                byte[] data = UTF8Encoding.UTF8.GetBytes(str);
+
                 using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
                 {
                     byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(lLlLlL));
@@ -73,10 +84,14 @@ namespace Encryption
                         textBox2.Text = Convert.ToBase64String(results, 0, results.Length);
                     }
 
+
                     textBox1.Text = "";
                     textBox3.Text = "";
                     button3.Text = "Copy";
+
                 }
+                textBox1.Text = "";
+                textBox3.Text = "";
             }
         }
 
@@ -84,12 +99,19 @@ namespace Encryption
         {
 
 
+
             if (String.IsNullOrWhiteSpace(Convert.FromBase64String(textBox1.Text).ToString()))
+
+            var str = textBox1.Text;
+
+            if (String.IsNullOrEmpty(str))
+
             {
 
             }
             else
             {
+
 
                 byte[] data = Convert.FromBase64String(textBox1.Text);
                 using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
@@ -104,6 +126,7 @@ namespace Encryption
                 }
                 textBox1.Text = "";
                 textBox2.Text = "";
+
                 button3.Text = "Copy";
             }
         }
@@ -116,3 +139,10 @@ namespace Encryption
         }
     }
 }
+
+            }
+        }
+    }
+}
+
+
