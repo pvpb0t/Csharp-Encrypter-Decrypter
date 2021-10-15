@@ -8,3 +8,13 @@ C:\Users\fperg\source\repos\Encryption\obj\Debug\Encryption.csproj.GenerateResou
 C:\Users\fperg\source\repos\Encryption\obj\Debug\Encryption.csproj.CoreCompileInputs.cache
 C:\Users\fperg\source\repos\Encryption\obj\Debug\Encryption.exe
 C:\Users\fperg\source\repos\Encryption\obj\Debug\Encryption.pdb
+C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\bin\Debug\Encryption.exe.config
+C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\bin\Debug\Encryption.exe
+C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\bin\Debug\Encryption.pdb
+C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\obj\Debug\Encryption.csproj.AssemblyReference.cache
+C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\obj\Debug\Encryption.Form1.resources
+C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\obj\Debug\Encryption.Properties.Resources.resources
+C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\obj\Debug\Encryption.csproj.GenerateResource.cache
+C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\obj\Debug\Encryption.csproj.CoreCompileInputs.cache
+C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\obj\Debug\Encryption.exe
+C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\obj\Debug\Encryption.pdb

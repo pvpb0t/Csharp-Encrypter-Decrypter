@@ -17,11 +17,9 @@ namespace Encryption
         public Form1()
         {
             InitializeComponent();
-            this.Text = "Encrypter/Decrypter";
+            this.Text = "Encrypt/Decrypt";
         }
 
-
-        
 
         public string DecryptString(string encrString)
         {
@@ -55,9 +53,9 @@ namespace Encryption
 
             //textBox2.Text = $"encrypted string = {encryptedString}";
 
-                       var nullorempty = textBox1.Text;
+            var not = textBox1.Text;
 
-            if (String.IsNullOrWhiteSpace(nullorempty))
+            if (String.IsNullOrWhiteSpace(not))
             {
 
             }
@@ -65,7 +63,8 @@ namespace Encryption
             {
 
 
-                byte[] data = UTF8Encoding.UTF8.GetBytes(nullorempty);
+
+                byte[] data = UTF8Encoding.UTF8.GetBytes(textBox1.Text);
                 using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
                 {
                     byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(lLlLlL));
@@ -85,7 +84,8 @@ namespace Encryption
 
         private void button1_Click(object sender, EventArgs e)
         {
-           if (String.IsNullOrWhiteSpace(Convert.FromBase64String(textBox1.Text).ToString()))
+
+            if (String.IsNullOrWhiteSpace(textBox1.Text))
             {
 
             }
@@ -108,6 +108,19 @@ namespace Encryption
                 button3.Text = "Copy";
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(textBox2.Text))
+            {
+
+            }
+            else
+            {
+                textBox2.Select();
+                textBox2.Copy();
+                button3.Text = "Copied!";
+            }
+        }
     }
 }
-
