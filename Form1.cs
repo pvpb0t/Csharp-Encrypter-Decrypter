@@ -17,7 +17,6 @@ namespace Encryption
         public Form1()
         {
             InitializeComponent();
-            this.Text = "Encrypter/Decrypter";
         }
 
 
@@ -55,17 +54,14 @@ namespace Encryption
 
             //textBox2.Text = $"encrypted string = {encryptedString}";
 
-                       var nullorempty = textBox1.Text;
+            var str = textBox1.Text;
 
-            if (String.IsNullOrWhiteSpace(nullorempty))
+            if (String.IsNullOrEmpty(str))
             {
 
-            }
-            else
+            }else
             {
-
-
-                byte[] data = UTF8Encoding.UTF8.GetBytes(nullorempty);
+                byte[] data = UTF8Encoding.UTF8.GetBytes(str);
                 using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
                 {
                     byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(lLlLlL));
@@ -75,22 +71,23 @@ namespace Encryption
                         byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
                         textBox2.Text = Convert.ToBase64String(results, 0, results.Length);
                     }
-
-                    textBox1.Text = "";
-                    textBox3.Text = "";
-                    button3.Text = "Copy";
                 }
+                textBox1.Text = "";
+                textBox3.Text = "";
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           if (String.IsNullOrWhiteSpace(Convert.FromBase64String(textBox1.Text).ToString()))
+            var str = textBox1.Text;
+
+            if (String.IsNullOrEmpty(str))
             {
 
             }
             else
             {
+
 
                 byte[] data = Convert.FromBase64String(textBox1.Text);
                 using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
@@ -105,7 +102,6 @@ namespace Encryption
                 }
                 textBox1.Text = "";
                 textBox2.Text = "";
-                button3.Text = "Copy";
             }
         }
     }
