@@ -56,15 +56,15 @@ namespace Encryption
             var not = textBox1.Text;
 
             if (String.IsNullOrWhiteSpace(not))
+
             {
 
-            }
-            else
+            }else
             {
-
 
 
                 byte[] data = UTF8Encoding.UTF8.GetBytes(textBox1.Text);
+
                 using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
                 {
                     byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(lLlLlL));
@@ -74,11 +74,9 @@ namespace Encryption
                         byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
                         textBox2.Text = Convert.ToBase64String(results, 0, results.Length);
                     }
-
-                    textBox1.Text = "";
-                    textBox3.Text = "";
-                    button3.Text = "Copy";
                 }
+                textBox1.Text = "";
+                textBox3.Text = "";
             }
         }
 
@@ -91,6 +89,7 @@ namespace Encryption
             }
             else
             {
+
 
                 byte[] data = Convert.FromBase64String(textBox1.Text);
                 using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
@@ -105,7 +104,6 @@ namespace Encryption
                 }
                 textBox1.Text = "";
                 textBox2.Text = "";
-                button3.Text = "Copy";
             }
         }
 
