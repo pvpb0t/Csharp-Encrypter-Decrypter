@@ -8,3 +8,13 @@ C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\obj\Release\Encrypti
 C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\obj\Release\Encryption.csproj.CoreCompileInputs.cache
 C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\obj\Release\Encryption.exe
 C:\Users\osclju03\Downloads\Csharp-Encrypter-Decrypter-main\obj\Release\Encryption.pdb
+C:\Users\ferper07\Source\Repos\Csharp-Encrypter-Decrypter\bin\Release\Encryption.exe.config
+C:\Users\ferper07\Source\Repos\Csharp-Encrypter-Decrypter\bin\Release\Encryption.exe
+C:\Users\ferper07\Source\Repos\Csharp-Encrypter-Decrypter\bin\Release\Encryption.pdb
+C:\Users\ferper07\Source\Repos\Csharp-Encrypter-Decrypter\obj\Release\Encryption.csproj.AssemblyReference.cache
+C:\Users\ferper07\Source\Repos\Csharp-Encrypter-Decrypter\obj\Release\Encryption.Form1.resources
+C:\Users\ferper07\Source\Repos\Csharp-Encrypter-Decrypter\obj\Release\Encryption.Properties.Resources.resources
+C:\Users\ferper07\Source\Repos\Csharp-Encrypter-Decrypter\obj\Release\Encryption.csproj.GenerateResource.cache
+C:\Users\ferper07\Source\Repos\Csharp-Encrypter-Decrypter\obj\Release\Encryption.csproj.CoreCompileInputs.cache
+C:\Users\ferper07\Source\Repos\Csharp-Encrypter-Decrypter\obj\Release\Encryption.exe
+C:\Users\ferper07\Source\Repos\Csharp-Encrypter-Decrypter\obj\Release\Encryption.pdb

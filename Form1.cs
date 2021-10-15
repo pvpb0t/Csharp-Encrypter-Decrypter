@@ -20,6 +20,28 @@ namespace Encryption
             this.Text = "Encrypt/Decrypt";
         }
 
+        public void wait(int milliseconds)
+        {
+            var timer1 = new System.Windows.Forms.Timer();
+            if (milliseconds == 0 || milliseconds < 0) return;
+
+            // Console.WriteLine("start wait timer");
+            timer1.Interval = milliseconds;
+            timer1.Enabled = true;
+            timer1.Start();
+
+            timer1.Tick += (s, e) =>
+            {
+                timer1.Enabled = false;
+                timer1.Stop();
+                // Console.WriteLine("stop wait timer");
+            };
+
+            while (timer1.Enabled)
+            {
+                Application.DoEvents();
+            }
+        }
 
         public string DecryptString(string encrString)
         {
@@ -109,6 +131,26 @@ namespace Encryption
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            if (String.IsNullOrEmpty(textBox2.Text))
+            {
+
+            }
+            else
+            {
+
+
+
+                Clipboard.SetText(textBox2.Text);
+                button3.Text = "Copied";
+                wait(1000); //wait one second
+                button3.Text = "Copy";
+            }
 
         }
 
